@@ -2,4 +2,7 @@ Zsh setup
 ---------
 
 ## Install
-  cp .zshrc .tmux.conf ~
+
+```sh
+cp .zshrc .tmux.conf ~
+```
