@@ -1,11 +1,11 @@
 #! /usr/bin/env zsh
 
-zshDir=~/.zsh/
-zshConfigDir=$zshDir/init.conf.d/
+ZSHDIR=~/.zsh/
+ZSHCONFIGDIR=$ZSHDIR/init.conf.d/
 
 function loadConfiguration {
-	source $zshDir/init.sh $zshConfigDir
-	source $zshDir/initWorkSpecific.sh $zshConfigDir
+	source $ZSHDIR/init.sh $ZSHCONFIGDIR
+	source $ZSHDIR/initWorkSpecific.sh $ZSHCONFIGDIR
 }
 
 function loadTmux {
