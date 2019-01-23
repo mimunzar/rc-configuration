@@ -5,7 +5,7 @@ ZSHCONFIGDIR=$ZSHDIR/init.conf.d/
 
 function loadConfiguration {
 	source $ZSHDIR/init.sh $ZSHCONFIGDIR
-	source $ZSHDIR/initWorkSpecific.sh $ZSHCONFIGDIR
+	source $ZSHDIR/initWorkSpecific.sh
 }
 
 function loadTmux {
