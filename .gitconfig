@@ -1,0 +1,10 @@
+[user]
+	name = Milan Munzar
+[core]
+	autocrlf = input
+	pager = less
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch

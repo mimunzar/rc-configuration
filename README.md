@@ -4,5 +4,5 @@ Zsh setup
 ## Install
 
 ```sh
-cp .zshrc .tmux.conf ~
+cp .gitconfig .zshrc .tmux.conf ~
 ```
