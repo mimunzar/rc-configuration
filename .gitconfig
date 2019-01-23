@@ -1,5 +1,6 @@
 [user]
 	name = Milan Munzar
+	email = mimunzar@gmail.com
 [core]
 	autocrlf = input
 	pager = less
@@ -8,3 +9,5 @@
 	ci = commit
 	co = checkout
 	br = branch
+[color]
+	ui = auto
