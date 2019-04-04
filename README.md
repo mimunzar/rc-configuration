@@ -7,7 +7,7 @@ Includes configuration for Zsh, Git and Tmux.
 
 ## Installation
 
-Requieres tmux-2.8 and newer.
+Requieres tmux-2.8 and newer and zenburn theme for vim.
 
 ```sh
 git clone git@github.com:mimunzar/CommandLine.git ~/.zsh/
