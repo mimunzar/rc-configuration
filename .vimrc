@@ -9,3 +9,7 @@ set expandtab		" pressing tab will insert spaces
 filetype on		    " enable filetype detection
 filetype indent on	" enable loading of indent files
 filetype plugin on	" enable loading of plugin files
+
+if has('gui_running')
+    set guifont=Terminus\ 10
+endif
