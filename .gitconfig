@@ -1,6 +1,6 @@
 [user]
-	name = Milan Munzar
-	email = mimunzar@gmail.com
+	# name = 
+	# email = 
 [core]
 	autocrlf = input
 	pager = less
@@ -11,3 +11,5 @@
 	br = branch
 [color]
 	ui = auto
+[grep]
+    lineNumber = true
