@@ -10,6 +10,8 @@ filetype on		    " enable filetype detection
 filetype indent on	" enable loading of indent files
 filetype plugin on	" enable loading of plugin files
 
+ru macros/justify.vim  " adds '_j' command for text justification
+
 if has('gui_running')
     set guifont=Terminus\ 10
 endif
