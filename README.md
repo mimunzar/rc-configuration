@@ -11,6 +11,6 @@ Requieres **tmux-2.8** and newer and Zenburn theme for Vim.
 
 ```sh
 git clone git@github.com:mimunzar/CommandLine.git ~/.zsh/
-cd ~/.zsh/ && cp .zshrc .gitconfig .tmux.conf .vimrc ~
+cp ~/.zsh/.* ~
 source ~/.zshrc
 ```
