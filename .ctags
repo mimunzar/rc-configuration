@@ -1,0 +1,7 @@
+--exclude=.git
+--exclude=build
+--exclude=tests
+
+--recurse=yes
+--tag-relative=yes
+
