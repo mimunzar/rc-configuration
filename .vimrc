@@ -3,6 +3,7 @@ set nocompatible        " no compatible with VI
 source ~/.zsh/vim/netrw.vim
 source ~/.zsh/vim/search.vim
 source ~/.zsh/vim/buffers.vim
+source ~/.zsh/vim/templates.vim
 ru macros/justify.vim
 
 set ruler               " always display the cursor position
@@ -29,7 +30,6 @@ set autoread            " autoload file when externally changed
 
 set list                        " displays unprintable characters
 set listchars=tab:>-,trail:-    " display tabs and trailing whitespaces
-
 
 if has('gui_running')
     set guifont=Terminus\ 10
