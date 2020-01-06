@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 
-ZSHDIR=~/.zsh/
+ZSHDIR=~/.zsh/zsh/
 ZSHCONFIGDIR=$ZSHDIR/init.conf.d/
 
 function loadConfiguration {

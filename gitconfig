@@ -1,0 +1,16 @@
+[user]
+    name = Milan Munzar
+    email = #
+[core]
+    autocrlf = input
+    pager = less
+    editor = vim
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+[color]
+    ui = auto
+[grep]
+    lineNumber = true

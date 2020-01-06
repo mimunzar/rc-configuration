@@ -1,16 +1,14 @@
-Command line setup
-------------------
+Command line
+============
 
-![alt text](https://github.com/mimunzar/CommandLine/blob/master/screenshot.png "screenshot")
+Command line configuration including zsh, tmux, vim, conky...
 
-Includes configuration for Conky, Git, Tmux, Vim and Zsh,
+Installation
+------------
 
-## Installation
-
-Requieres **tmux-2.8** and newer and Zenburn theme for Vim.
+Requires `zsh`, `tmux-2.8` and newer and `zenburn` theme for vim.
 
 ```sh
-git clone git@github.com:mimunzar/CommandLine.git ~/.zsh/
-cp ~/.zsh/.* ~
-source ~/.zshrc
+git clone git@github.com:mimunzar/CommandLine.git ~/.zsh/ && zsh ~/.zsh/INSTALL.sh
+
 ```
