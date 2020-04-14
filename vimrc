@@ -31,6 +31,12 @@ set autoread            " autoload file when externally changed
 set list                        " displays unprintable characters
 set listchars=tab:>-,trail:-    " display tabs and trailing whitespaces
 
+set pastetoggle=<F5>
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+set ignorecase " case-sensitive search trigger by writing an upper-case
+set smartcase
+
 if has('gui_running')
     set guifont=Fira\ Code\ Retina\ 10
     execute pathogen#infect()
