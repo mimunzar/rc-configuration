@@ -33,13 +33,10 @@ set listchars=tab:>-,trail:-    " display tabs and trailing whitespaces
 
 set pastetoggle=<F4>                    " paste without autoformating
 nnoremap <silent> <C-l> :nohl<CR><C-l>
-nnoremap <F5> :!ctags -R<CR>
+nnoremap <F5> :!ctags -R --exclude=@.ctagsignore .<CR>
 
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
 
-if has('gui_running')
-    set guifont=Fira\ Code\ Retina\ 10
-    execute pathogen#infect()
-endif
+execute pathogen#infect()
 
