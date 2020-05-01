@@ -31,8 +31,9 @@ set autoread            " autoload file when externally changed
 set list                        " displays unprintable characters
 set listchars=tab:>-,trail:-    " display tabs and trailing whitespaces
 
-set pastetoggle=<F5>
+set pastetoggle=<F4>                    " paste without autoformating
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <F5> :!ctags -R<CR>
 
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
