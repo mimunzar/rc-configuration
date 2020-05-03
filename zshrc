@@ -1,17 +1,25 @@
 #! /usr/bin/env zsh
 
-ZSHDIR=~/.zsh/zsh/
-ZSHCONFIGDIR=$ZSHDIR/init.conf.d/
 
-function loadConfiguration {
-	source $ZSHDIR/init.sh $ZSHCONFIGDIR
-	source $ZSHDIR/initWorkSpecific.sh
+function loadShellConfiguration {
+    shDir=~/.zsh/zsh/
+    source $shDir/init.sh $shDir/init.conf.d
+    source $shDir/initWorkSpecific.sh
 }
 
 function loadTmux {
-	[[ $- != *i* ]] && return 1
-	[[ -z "$TMUX" ]] && exec tmux -2
+    [[ $- != *i* ]] && return 1
+    [[ -z "$TMUX" ]] && exec tmux -2
+}
+
+function loadExternalScripts {
+    scriptsDir=~/.zsh/scripts/
+    for file in `ls -v $scriptsDir`; do
+         ln -sf $scriptsDir/$file ~/bin
+    done
 }
 
 loadTmux
-loadConfiguration
+loadShellConfiguration
+loadExternalScripts
+
