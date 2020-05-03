@@ -13,8 +13,8 @@ function loadTmux {
 }
 
 function loadExternalScripts {
-    scriptsDir=~/.zsh/scripts/
-    for file in `ls -v $scriptsDir`; do
+    scriptsDir=~/.zsh/scripts
+    for file in `ls -v $scriptsDir | grep -vE "^[A-Z]"`; do
          ln -sf $scriptsDir/$file ~/bin
     done
 }
