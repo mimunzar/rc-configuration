@@ -7,11 +7,6 @@ function loadShellConfiguration {
     source $shDir/initWorkSpecific.sh
 }
 
-function loadTmux {
-    [[ $- != *i* ]] && return 1
-    [[ -z "$TMUX" ]] && exec tmux -2
-}
-
 function loadExternalScripts {
     scriptsDir=~/.zsh/scripts
     for file in `ls -v $scriptsDir | grep -vE "^[A-Z]"`; do
@@ -19,7 +14,6 @@ function loadExternalScripts {
     done
 }
 
-loadTmux
 loadShellConfiguration
 loadExternalScripts
 
