@@ -1,5 +1,13 @@
 #! /usr/bin/env zsh
 
+function loadPaths {
+    path=(~/bin $path)
+    fpath=(~/.zsh/completion $fpath)
+}
+
+function remaptCtrlToCaps {
+    setxkbmap -layout us -option ctrl:nocaps
+}
 
 function loadShellConfiguration {
     shDir=~/.zsh/zsh/
@@ -19,7 +27,10 @@ function loadExternalScripts {
     done
 }
 
-loadTmux
+remaptCtrlToCaps
+
+loadPaths
 loadShellConfiguration
 loadExternalScripts
+loadTmux
 
