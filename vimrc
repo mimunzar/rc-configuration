@@ -24,6 +24,9 @@ set hlsearch            " highlights all search matches
 filetype on             " enable filetype detection
 filetype indent on      " enable loading of indent files
 filetype plugin on      " enable loading of plugin files
+
+au BufRead,BufNewFile *.edn set ft=clojure " Clojure's *.edn files
+
 set autoindent          " copy indent from the previous line
 set autoread            " autoload file when externally changed
 

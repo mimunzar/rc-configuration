@@ -1,5 +1,6 @@
 .cache/
 initWorkSpecific.sh
+completion/
 
 *.swp
 *.swo

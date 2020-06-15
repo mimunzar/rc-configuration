@@ -12,5 +12,7 @@
     br = branch
 [color]
     ui = auto
+    status = auto
+    diff = auto
 [grep]
     lineNumber = true
