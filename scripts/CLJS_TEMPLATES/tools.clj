@@ -13,7 +13,7 @@
     (System/exit 1)))
 
 (def build-opts
-  {:main '${PROJECT_NAME}.core
+  {:main '${PROJECT_NAME}.main
    :output-to "main.js"
    :output-dir "out"
    :target :nodejs
@@ -37,7 +37,7 @@
   [args]
   (b/build (b/inputs "src" "test")
            (assoc build-opts
-                  :main '${PROJECT_NAME}.test.core_test
+                  :main '${PROJECT_NAME}.test.main_test
                   :output-to "out/tests.js"
                   :output-dir "out/tests"
                   :target :nodejs)))
@@ -51,7 +51,7 @@
     (try
       (b/watch (b/inputs "src", "test")
                (assoc build-opts
-                      :main '${PROJECT_NAME}.test.core_test
+                      :main '${PROJECT_NAME}.test.main_test
                       :watch-fn run-tests
                       :output-to "out/tests.js"
                       :output-dir "out/tests"

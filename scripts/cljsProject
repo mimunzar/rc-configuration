@@ -6,12 +6,12 @@ if [[ -z "$1" ]]; then
 fi
 
 mkdir -p ${1}/src/${1}
-cp ~/.zsh/scripts/CLJS_TEMPLATES/core.cljs ${1}/src/${1}
-sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/src/${1}/core.cljs
+cp ~/.zsh/scripts/CLJS_TEMPLATES/main.cljs ${1}/src/${1}
+sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/src/${1}/main.cljs
 
 mkdir -p ${1}/test/${1}
-cp ~/.zsh/scripts/CLJS_TEMPLATES/core_test.cljs ${1}/test/${1}
-sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/test/${1}/core_test.cljs
+cp ~/.zsh/scripts/CLJS_TEMPLATES/main_test.cljs ${1}/test/${1}
+sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/test/${1}/main_test.cljs
 
 cp ~/.zsh/scripts/CLJS_TEMPLATES/deps.edn  ${1}
 cp ~/.zsh/scripts/CLJS_TEMPLATES/tools.clj ${1}

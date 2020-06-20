@@ -1,4 +1,4 @@
-(ns ${PROJECT_NAME}.test.core_test
+(ns ${PROJECT_NAME}.test.main_test
   (:require [cljs.test :as t]))
 
 (enable-console-print!)

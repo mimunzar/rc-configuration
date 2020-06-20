@@ -1,4 +1,4 @@
-(ns ${PROJECT_NAME}.core
+(ns ${PROJECT_NAME}.main
   (:require [cljs.nodejs :as nodejs]))
 
 (nodejs/enable-util-print!)

@@ -1,7 +1,7 @@
 Command line
 ============
 
-Command line configuration including zsh, tmux, vim, conky...
+Command line configuration including zsh, tmux, vim.
 
 Installation
 ------------
