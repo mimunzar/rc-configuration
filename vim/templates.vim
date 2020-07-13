@@ -1,3 +1,4 @@
+" template file for different suffixes
 if has("autocmd")
     augroup templates
         autocmd BufNewFile *.py 0r ~/.zsh/vim/templates/skeleton.py
