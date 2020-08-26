@@ -4,6 +4,7 @@ source ~/.zsh/vim/netrw.vim
 source ~/.zsh/vim/search.vim
 source ~/.zsh/vim/buffers.vim
 source ~/.zsh/vim/templates.vim
+source ~/.zsh/vim/tslime.vim
 ru macros/justify.vim
 
 set ruler               " always display the cursor position
