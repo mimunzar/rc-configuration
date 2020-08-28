@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+
+# Coloring for cljs test
+
+use strict;
+use warnings;
+
+while (<>) {
+    /^Testing\s(.+)/ && s//Testing \e[1m$1\e[0m/;
+    /^(FAIL).+?\((.+)?\)\s\((.+)\)/ && s//\e[1m\e[38;2;215;135;135m$1\e[0m in (\e[1m$2\e[0m) ($3)/;
+    /^(expected.*)/  && s//\e[1m$1\e[0m/;
+    /^(\s*actual.*)/ && s//\e[1m$1\e[0m/;
+    print $_;
+}
+
