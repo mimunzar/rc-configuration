@@ -1,16 +1,29 @@
 #!/usr/bin/env perl
 
-# Coloring for cljs compiler & test
+# Coloring for cljs compiler and test outputs.
 
 use strict;
 use warnings;
 
 while (<>) {
     /^Testing\s(.+)/ && s//Testing \e[1m$1\e[0m/;
-    /^(FAIL).+?\((.+)?\)\s\((.+)\)/ && s//\e[1m\e[38;2;215;135;135m$1\e[0m in (\e[1m$2\e[0m) ($3)/;
     /^(expected.*)/  && s//\e[1m$1\e[0m/;
     /^(\s*actual.*)/ && s//\e[1m$1\e[0m/;
-    /^(WARNING.*)/ && s//\e[1m\e[38;2;239;239;175m$1\e[0m/;
+
+    /^(WARNING.*)/
+        && s//\e[1m\e[38;2;239;239;175m$1\e[0m/;
+    /^(FAIL).+?\((.+)?\)\s\((.+)\)/
+        && s//\e[1m\e[38;2;215;135;135m$1\e[0m in (\e[1m$2\e[0m) ($3)/;
+    /^Ran (\d+) tests containing (\d+) assertions.$/
+        && s//Ran \e[1m$1 tests\e[0m containing \e[1m$2 assertions\e[0m/;
+
+    if (/^(\d+) failures, (\d+) errors.$/) {
+        if ($1 or $2) {
+            s//\e[1m\e[38;2;215;135;135m$1 failures, $2 errors\e[0m/;
+        } else {
+            s//\e[1m\e[38;2;179;219;169m$1 failures, $2 errors\e[0m/;
+        }
+    }
     print $_;
 }
 

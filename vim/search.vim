@@ -17,8 +17,7 @@ call SetupCommandAlias("grep", "GrepperGrep")
 let g:grepper       = {}
 let g:grepper.tools = ['git', 'grep']
 
-" search for current word and visual selection
-nnoremap <Leader>* :Grepper -cword -noprompt<CR>
+" Define Grepper operator that takes motion or current selection
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 
