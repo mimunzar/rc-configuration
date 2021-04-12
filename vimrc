@@ -5,6 +5,8 @@ source ~/.zsh/vim/search.vim
 source ~/.zsh/vim/buffers.vim
 source ~/.zsh/vim/templates.vim
 source ~/.zsh/vim/slime.vim
+source ~/.zsh/vim/coc.vim
+source ~/.zsh/vim/ctrlp.vim
 ru macros/justify.vim
 
 set ruler               " always display the cursor position
@@ -42,8 +44,7 @@ nnoremap <F5> :!ctags -R --exclude=@.ctagsignore .<CR>
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
 
-colorscheme darkblue
+colorscheme ron
 
 execute pathogen#infect()
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
