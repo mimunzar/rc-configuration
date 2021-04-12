@@ -1,5 +1,6 @@
 #! /usr/bin/env zsh
 
+
 function loadPaths {
     path=(~/bin $path)
     fpath=(~/.zsh/completion $fpath)
@@ -7,6 +8,10 @@ function loadPaths {
 
 function remaptCtrlToCaps {
     setxkbmap -layout us -option ctrl:nocaps
+}
+
+function loadDirColors {
+    eval `dircolors -b`
 }
 
 function loadShellConfiguration {
@@ -28,9 +33,11 @@ function loadExternalScripts {
 }
 
 remaptCtrlToCaps
-
+loadDirColors
 loadPaths
 loadShellConfiguration
 loadExternalScripts
 loadTmux
+
+[ -f "/home/mmunzar/.ghcup/env" ] && source "/home/mmunzar/.ghcup/env" # ghcup-env
 

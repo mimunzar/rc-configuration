@@ -13,7 +13,7 @@ set scrolloff=10        " minimal number of lines to keep around the cursor
 set cursorline          " highlights current line
 
 set nu                  " set line numbering
-set syntax=on           " set syntax highlighting
+syntax enable           " set syntax highlighting
 
 set tabstop=4           " existing tabs have width of 4 spaces
 set shiftwidth=4        " indenting with '<' or '>' will use 4 spaces
@@ -42,7 +42,7 @@ nnoremap <F5> :!ctags -R --exclude=@.ctagsignore .<CR>
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
 
-colorscheme zenburn
+colorscheme darkblue
 
 execute pathogen#infect()
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
