@@ -1,0 +1,24 @@
+! Font
+xterm*faceName: monospace:pixelsize=14
+
+! Every shell is a login shell by default (for inclusion of all necessary env. variables)
+xterm*loginshell: true
+
+! Lot of scrollback...
+xterm*savelines: 10000
+
+! Hide scrollbar
+xterm*ScrollBar: false
+
+! Stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+
+! Zenburn
+*foreground: #dcdcdc
+*background: #1f1f1f
+
+! Clipboard support
+xterm*VT100.Translations: #override \
+        Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+        Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+

@@ -1,12 +1,10 @@
-Command line
-============
+# Linux Configuration
 
-Command line configuration including zsh, tmux, vim.
+Configuration for X, xterm, ZSH and I3.
 
-Installation
-------------
+## Installation
 
 ```sh
-git clone git@github.com:mimunzar/CommandLine.git ~/.zsh/ && zsh ~/.zsh/INSTALL.sh
+    git clone git@github.com:mimunzar/CommandLine.git ~/.zsh/ && zsh ~/.zsh/INSTALL.sh
 
 ```
