@@ -6,9 +6,9 @@ function loadPaths {
     fpath=(~/.zsh/completion $fpath)
 }
 
-function remaptCtrlToCaps {
-    setxkbmap -layout us -option ctrl:nocaps
-}
+# function remaptCtrlToCaps {
+#     setxkbmap -layout us -option ctrl:nocaps
+# }
 
 function loadDirColors {
     eval `dircolors -b`
@@ -32,7 +32,7 @@ function loadExternalScripts {
     done
 }
 
-remaptCtrlToCaps
+# remaptCtrlToCaps
 loadDirColors
 loadPaths
 loadShellConfiguration
