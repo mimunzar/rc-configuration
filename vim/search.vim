@@ -21,4 +21,3 @@ let g:grepper.tools = ['git', 'grep']
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 
-

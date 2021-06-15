@@ -5,9 +5,9 @@ source ~/.zsh/vim/search.vim
 source ~/.zsh/vim/buffers.vim
 source ~/.zsh/vim/templates.vim
 source ~/.zsh/vim/slime.vim
-source ~/.zsh/vim/coc.vim
-source ~/.zsh/vim/ctrlp.vim
 ru macros/justify.vim
+
+set dir=/tmp            " put swap files into tmp
 
 set ruler               " always display the cursor position
 set showcmd             " shows command as it is being typed
@@ -28,11 +28,12 @@ filetype on             " enable filetype detection
 filetype indent on      " enable loading of indent files
 filetype plugin on      " enable loading of plugin files
 
-au BufRead,BufNewFile *.edn set ft=clojure  " Clojure's *.edn files
-au BufRead,BufNewFile *.cljc set ft=clojure " Clojure's *.cljc files
+au BufRead,BufNewFile *.asd set ft=lisp     " Syntax highlighting for *.asd files
+au BufRead,BufNewFile *.edn set ft=clojure  " Syntax highlighting for *.edn files
+au BufRead,BufNewFile *.cljc set ft=clojure " Syntax highlighting for *.cljc files
 
-set autoindent          " copy indent from the previous line
-set autoread            " autoload file when externally changed
+set autoindent  " copy indent from the previous line
+set autoread    " autoload file when externally changed
 
 set list                        " displays unprintable characters
 set listchars=tab:>-,trail:-    " display tabs and trailing whitespaces
@@ -44,7 +45,5 @@ nnoremap <F5> :!ctags -R --exclude=@.ctagsignore .<CR>
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
 
-colorscheme ron
-
-execute pathogen#infect()
+colorscheme zenburn
 
