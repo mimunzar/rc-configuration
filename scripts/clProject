@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+if [[ -z "$1" ]]; then
+    echo "cljsProject: missing project name"
+    exit 1
+fi
+
+mkdir -p ${1}/src/
+mkdir -p ${1}/test/
+
+cp ~/.zsh/scripts/CL_TEMPLATES/main.lisp ${1}/src/
+cp ~/.zsh/scripts/CL_TEMPLATES/main-test.lisp ${1}/test/
+cp ~/.zsh/scripts/CL_TEMPLATES/system.asd ${1}/${1}.asd
+cp ~/.zsh/scripts/CL_TEMPLATES/Makefile ${1}
+
+find $1 -type f | xargs -I{} sed -i "s/\${PROJECT_NAME}/${1}/g" {}
+

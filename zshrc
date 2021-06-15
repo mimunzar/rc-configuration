@@ -6,10 +6,6 @@ function loadPaths {
     fpath=(~/.zsh/completion $fpath)
 }
 
-# function remaptCtrlToCaps {
-#     setxkbmap -layout us -option ctrl:nocaps
-# }
-
 function loadDirColors {
     eval `dircolors -b`
 }
@@ -32,7 +28,6 @@ function loadExternalScripts {
     done
 }
 
-# remaptCtrlToCaps
 loadDirColors
 loadPaths
 loadShellConfiguration
@@ -41,3 +36,6 @@ loadTmux
 
 [ -f "/home/mmunzar/.ghcup/env" ] && source "/home/mmunzar/.ghcup/env" # ghcup-env
 
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 
 if [[ -z "$1" ]]; then
     echo "cljsProject: missing project name"
@@ -6,14 +6,12 @@ if [[ -z "$1" ]]; then
 fi
 
 mkdir -p ${1}/src/${1}
-cp ~/.zsh/scripts/CLJS_TEMPLATES/main.cljs ${1}/src/${1}
-sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/src/${1}/main.cljs
-
 mkdir -p ${1}/test/${1}
-cp ~/.zsh/scripts/CLJS_TEMPLATES/main_test.cljs ${1}/test/${1}
-sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/test/${1}/main_test.cljs
 
-cp ~/.zsh/scripts/CLJS_TEMPLATES/deps.edn  ${1}
+cp ~/.zsh/scripts/CLJS_TEMPLATES/main.cljs ${1}/src/${1}
+cp ~/.zsh/scripts/CLJS_TEMPLATES/main_test.cljs ${1}/test/${1}
+cp ~/.zsh/scripts/CLJS_TEMPLATES/deps.edn ${1}
 cp ~/.zsh/scripts/CLJS_TEMPLATES/makefile.clj ${1}
-sed -i "s/\${PROJECT_NAME}/${1}/g" ${1}/makefile.clj
+
+find $1 -type f | xargs -I{} sed -i "s/\${PROJECT_NAME}/${1}/g" {}
 
