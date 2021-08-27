@@ -45,5 +45,3 @@ nnoremap <F5> :!ctags -R --exclude=@.ctagsignore .<CR>
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
 
-colorscheme zenburn
-

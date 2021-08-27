@@ -1,4 +1,4 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
 
 
 function loadPaths {
@@ -11,9 +11,9 @@ function loadDirColors {
 }
 
 function loadShellConfiguration {
-    shDir=~/.zsh/zsh/
+    local shDir=~/.zsh/zsh/
     source $shDir/init.sh $shDir/init.conf.d
-    source $shDir/initWorkSpecific.sh
+    [[ -f "$shDir/initWorkSpecific.sh" ]] && source $shDir/initWorkSpecific.sh
 }
 
 function loadTmux {
@@ -22,8 +22,9 @@ function loadTmux {
 }
 
 function loadExternalScripts {
-    scriptsDir=~/.zsh/scripts
-    for file in `ls -v $scriptsDir | grep -vE "^[A-Z]"`; do
+    local scriptsDir=~/.zsh/scripts
+    [[ -d ~/bin ]] || mkdir ~/bin
+    for file in $(ls -v $scriptsDir | grep -vE "^[A-Z]"); do
          ln -sf $scriptsDir/$file ~/bin
     done
 }
@@ -34,8 +35,3 @@ loadShellConfiguration
 loadExternalScripts
 loadTmux
 
-[ -f "/home/mmunzar/.ghcup/env" ] && source "/home/mmunzar/.ghcup/env" # ghcup-env
-
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
