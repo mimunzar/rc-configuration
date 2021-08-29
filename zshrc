@@ -13,12 +13,16 @@ function loadDirColors {
 function loadShellConfiguration {
     local shDir=~/.zsh/zsh/
     source $shDir/init.sh $shDir/init.conf.d
-    [[ -f "$shDir/initWorkSpecific.sh" ]] && source $shDir/initWorkSpecific.sh
+    if [[ -f "$shDir/initWorkSpecific.sh" ]]; then
+        source $shDir/initWorkSpecific.sh
+    fi
 }
 
 function loadTmux {
-    [[ $- != *i* ]] && return 1
-    [[ -z "$TMUX" ]] && exec tmux -2
+    [[ $- != *i* || -z "$(command -v "tmux")" ]] && return 1
+    if [[ -z "$TMUX" ]]; then
+        exec tmux -2
+    fi
 }
 
 function loadExternalScripts {
