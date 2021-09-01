@@ -6,10 +6,6 @@ function loadPaths {
     fpath=(~/.zsh/completion $fpath)
 }
 
-function loadDirColors {
-    eval `dircolors -b`
-}
-
 function loadShellConfiguration {
     local shDir=~/.zsh/zsh/
     source $shDir/init.sh $shDir/init.conf.d
@@ -33,7 +29,6 @@ function loadExternalScripts {
     done
 }
 
-loadDirColors
 loadPaths
 loadShellConfiguration
 loadExternalScripts
