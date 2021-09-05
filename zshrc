@@ -16,6 +16,7 @@ function loadShellConfiguration {
 
 function loadTmux {
     [[ $- != *i* || -z "$(command -v "tmux")" ]] && return 1
+    export TERM="tmux-256color"
     if [[ -z "$TMUX" ]]; then
         exec tmux -2
     fi
@@ -28,6 +29,7 @@ function loadExternalScripts {
          ln -sf $scriptsDir/$file ~/bin
     done
 }
+
 
 loadPaths
 loadShellConfiguration
