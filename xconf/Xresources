@@ -1,5 +1,6 @@
 ! Font
-xterm*faceName: monospace:pixelsize=14
+xterm*faceName: Cascadia Mono
+xterm*faceSize: 12
 
 ! Every shell is a login shell by default (for inclusion of all necessary env. variables)
 xterm*loginshell: true
