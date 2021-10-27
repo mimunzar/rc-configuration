@@ -1,5 +1,6 @@
 set nocompatible        " no compatible with VI
 
+source ~/.zsh/vim/coc.vim
 source ~/.zsh/vim/netrw.vim
 source ~/.zsh/vim/search.vim
 source ~/.zsh/vim/buffers.vim
@@ -45,3 +46,4 @@ nnoremap <F5> :!ctags -R --exclude=@.ctagsignore .<CR>
 set ignorecase " case-sensitive search trigger by writing an upper-case
 set smartcase
 
+colors zenburn
