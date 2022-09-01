@@ -1,18 +1,20 @@
 [user]
-    name = Milan Munzar
+    name  = Milan Munzar
     email = mimunzar@gmail.com
 [core]
     autocrlf = input
-    pager = less
-    editor = vim
+    pager    = less
+    editor   = vim
 [alias]
     st = status
     ci = commit
     co = checkout
     br = branch
 [color]
-    ui = auto
+    ui     = auto
     status = auto
-    diff = auto
+    diff   = auto
 [grep]
     lineNumber = true
+[init]
+    defaultBranch = master
