@@ -27,14 +27,14 @@ loadShellConfiguration() {
 }
 
 loadTmux() {
-    isInstalled() {
+    canStart() {
         [[ $- == *i* && -n "$(command -v "tmux")" ]]
     }
     startIfNotRunning() {
         export TERM="tmux-256color"
         [[ -z "$TMUX" ]] && exec tmux -2
     }
-    isInstalled && startIfNotRunning
+    canStart && startIfNotRunning
 }
 
 loadExternalScripts() {
