@@ -31,7 +31,6 @@ loadTmux() {
         [[ $- == *i* && -n "$(command -v "tmux")" ]]
     }
     startIfNotRunning() {
-        export TERM="tmux-256color"
         [[ -z "$TMUX" ]] && exec tmux -2
     }
     canStart && startIfNotRunning
