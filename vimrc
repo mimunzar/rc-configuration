@@ -1,8 +1,9 @@
 " no vi compatible
 set nocompatible
 
+run macros/justify.vim
 source ~/.zsh/vim/coc.vim
-ru     macros/justify.vim
+source ~/.zsh/vim/v_allign.vim
 
 " put swap files into tmp
 set dir=/tmp
@@ -56,7 +57,6 @@ au BufRead,BufNewFile *.asd  set ft=lisp
 au BufRead,BufNewFile *.edn  set ft=clojure
 au BufRead,BufNewFile *.cljc set ft=clojure
 
-
 " Bindings
 " --------
 nnoremap <silent> [b :bprevious<CR>
@@ -93,3 +93,4 @@ endif
 " -----
 let g:netrw_banner=0
 let g:netrw_list_hide='.*\.swp$,^\..*$,__pycache__'
+
